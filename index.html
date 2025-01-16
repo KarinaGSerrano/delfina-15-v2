@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+ZA:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Delfina 15</title>
+  </head>
+  <body
+    class="container text-center gradient-gh-light color7 mx-auto font3 size4"
+  >
+    <!-- FONDO FIJO -->
+    <div
+      class="fixed h-screen w-screen inset-0 -z-10 flex justify-between items-center"
+    >
+      <img
+        src="./assets/bg/flo-v2-2_Mesa de trabajo 3-04.svg"
+        alt="Imagen izquierda"
+        class="h-auto w-1/2 lg:w-1/4 object-contain opacity-90"
+      />
+      <img
+        src="./assets/bg/flo-v2-1_Mesa de trabajo 3-04.svg"
+        alt="Imagen derecha"
+        class="h-auto w-1/2 lg:w-1/4 object-contain opacity-90"
+      />
+    </div>
+    <!-- ---------- -->
+
+    <!-- Menú superior -->
+    <header
+      id="mainMenu"
+      class="fixed color3-bg top-0 left-0 w-full shadow-md transition-transform transform -translate-y-full z-30 h-20"
+    >
+      <div class="container mx-auto flex justify-center items-center h-full">
+        <a href="#portada">
+          <img
+            id="menuLogo"
+            class="text-center transition-all duration-500 h-14"
+            src="./assets/bg/icon-header-3.svg"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- Menu inferior -->
+    <div
+      class="fixed z-30 bottom-0 left-0 right-0 text-white color3-bg shadow-md"
+      style="box-shadow: 0 -4px 6px rgba(207, 178, 166, 0.254)"
+    >
+      <div class="flex justify-around items-center h-16">
+        <a
+          href="#portada"
+          class="flex flex-col items-center nav-item"
+          data-selected-src="./assets/bg/flower-test2-09.svg"
+          data-original-src="./assets/bg/icon-fecha.svg"
+          onclick="scrollAndAnimate(event, 'portada')"
+        >
+          <img
+            id=""
+            class="text-center w-6"
+            src="./assets/bg/icon-fecha.svg"
+            alt="logo"
+          />
+        </a>
+        <a
+          href="#sec2"
+          class="flex flex-col items-center nav-item"
+          data-selected-src="./assets/bg/flower-test2-09.svg"
+          data-original-src="./assets/bg/icon-check.svg"
+          onclick="scrollAndAnimate(event, 'sec2')"
+        >
+          <img
+            id=""
+            class="text-center w-6"
+            src="./assets/bg/icon-check.svg"
+            alt="logo"
+          />
+        </a>
+
+        <a
+          href="#sec3"
+          class="flex flex-col items-center nav-item"
+          data-selected-src="./assets/bg/flower-test2-09.svg"
+          data-original-src="./assets/bg/icon-gps2.svg"
+          onclick="scrollAndAnimate(event, 'sec3')"
+        >
+          <img
+            id=""
+            class="text-center w-5"
+            src="./assets/bg/icon-gps2.svg"
+            alt="logo"
+          />
+          <!-- <span class="text-sm">Mapa</span> -->
+        </a>
+
+        <a
+          href="#sec4"
+          class="flex flex-col items-center nav-item"
+          data-selected-src="./assets/bg/flower-test2-09.svg"
+          data-original-src="./assets/bg/icon-gif.svg"
+          onclick="scrollAndAnimate(event, 'sec4')"
+        >
+          <img
+            id=""
+            class="text-center w-5"
+            src="./assets/bg/icon-gif.svg"
+            alt="logo"
+          />
+          <!-- <span class="text-sm">Regalo</span> -->
+        </a>
+        <!-- Botón Más -->
+        <!-- Botón Más -->
+        <div class="relative">
+          <button id="btn-more" class="flex flex-col items-center">
+            <img class="w-6" src="./assets/bg/icon-more2.svg" alt="logo" />
+            <span class="text-sm color6">Más</span>
+          </button>
+          <!-- Menú desplegable -->
+          <div
+            id="more-menu"
+            class="absolute bottom-14 left-1/2 transform -translate-x-3/4 color7-bg text-white shadow-lg rounded-md hidden w-40 opacity-0 translate-y-4 transition-all duration-300 ease-out"
+          >
+            <a
+              href="#sec5"
+              class="flex items-center justify-start px-4 py-2 btn-hover w-full color6"
+              onclick="scrollAndAnimate(event, 'sec5')"
+            >
+              <img
+                class="text-center w-5 mr-2"
+                src="./assets/bg/icon-music.svg"
+                alt="logo"
+              />
+              Tema
+            </a>
+
+            <a
+              href="#sec6"
+              class="flex items-center justify-start px-4 py-2 btn-hover w-full color6"
+              onclick="scrollAndAnimate(event, 'sec6')"
+            >
+              <img
+                class="text-center w-5 mr-2"
+                src="./assets/bg/icon-gallery.svg"
+                alt="logo"
+              />
+              Galería
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container relative mx-auto">
+      <!-- Portada -->
+      <div
+        id="portada"
+        class="flex flex-col justify-center items-center h-screen"
+      >
+        <div class="relative -mt-20">
+          <img
+            src="./assets/bg/del-cur-ele2.svg"
+            class="mx-auto mt-16 pr-4"
+            style="width: 15rem"
+            alt="15"
+          />
+          <img src="./assets/bg/15-s.svg" class="w-80 -mt-10" alt="15" />
+        </div>
+
+        <p class="size4 font3 color5 mx-24 leading-relaxed">
+          TE INVITO A CELEBRAR CONMIGO
+        </p>
+
+        <div>
+          <p class="mt-12 font3 size5 color5">MARZO</p>
+          <div class="flex flex-row justify-center items-center gap-5 mt-5">
+            <p class="font3 border1 py-2 pl-6 pr-2 color5">Viernes</p>
+            <p class="font2 size3 color5">14</p>
+            <p class="font3 border1 py-2 color5 text-wrap">21:00 a 5:30</p>
+          </div>
+        </div>
+
+        <p class="size4 font3 color5 leading-relaxed">
+          Dress Code: <span class="font4 size9 "> Elegante</span>
+        </p>
+
+        <!-- a Chevron -->
+          <a
+          href="#sec2"
+          class="mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'sec2')"
+        >
+          <img
+            class="w-12 sombra-2 animate__animated animate__pulse animate__infinite animate__slow hover:animate__bounce animate__delay-2s animate__duration-1500"
+            src="assets/bg/icon-chevron-down.svg"
+            alt="chevron-down"
+          />
+        </a>                
+      </div>
+
+      <!-- ----------- SECCION 2 ---------------- -->
+      <div
+        id="sec2"
+        class="z-10 flex flex-col justify-center items-center h-screen mx-10"
+      >
+        <div>
+          <h2 class="font4 size8 sm:text-2xl md:text-2xl lg:size-6">
+            Confirmar asistencia
+          </h2>     
+          <p
+            class="escalera escalera-1 text-center size-10 mt-16 mx-8 leading-loose"
+          >
+            Por favor, completa este formulario para confirmar tu asistencia.
+            ¡Es rápido!
+          </p>
+            <a
+            href="https://forms.gle/AR3CCgeRZy6anMTv5"
+            target="_blank"
+            class="cta-button flex items-center justify-center py-3 px-6 btn-2 color1 rounded-full shadow-lg border2 mt-8 mx-2 transition-all duration-300 ease-in-out"
+          >
+            <img
+              class="text-center w-4 mr-2"
+              src="./assets/bg/icon-form2.svg"
+              alt="logo"
+            />
+            Completar formulario
+          </a>              
+        </div>
+        <!-- a Chevron -->
+          <a
+          href="#sec3"
+          class="mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'sec3')"
+        >
+          <img
+            class="w-12 sombra-2 animate__animated animate__pulse animate__infinite animate__slow hover:animate__bounce animate__delay-2s animate__duration-1500"
+            src="assets/bg/icon-chevron-down.svg"
+            alt="chevron-down"
+          />
+        </a>  
+      </div>
+      <!-- ----------- SECCION 3 ---------------- -->
+      <div
+        id="sec3"
+        class="container flex flex-col justify-center items-center h-screen text-center"
+      >
+        <h2
+          class="text-wrap leading-none mx-10 font4 size9 sm:text-2xl md:text-2xl lg:size-6 mt-16"
+        >
+          ¿Dónde celebro mi fiesta?
+        </h2>
+        
+        <!-- div card ubicacion -->
+        <div
+          id="cardUbicacion"
+          class="color-box-main shadow-lg rounded-lg p-2 flex flex-col md:flex-row md:justify-between mt-10 mx-10 opacity-0 transform translate-x-[-100px] transition-transform duration-700 ease-out"
+        >
+          <!-- Contenido del card -->
+          <div class="escalera escalera-1 md:order-2 md:w-1/2 md:text-right">
+            <!-- Imagen y texto -->
+            <div
+              class="mx-10 flex flex-row justify-center md:justify-end items-center gap-4 mt-2 md:mt-10"
+            >
+              <img
+                src="/assets/bg/janos-hudson.svg"
+                alt="janos"
+                class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/5 block"
+              />
+            </div>
+            <p class="fuente-3 size-7 font-normal">SALÓN DE EVENTOS.</p>
+            <p class="size-7 my-4">
+              <span class="font-medium color-3"
+                >AU BS - LA PLATA, km 34,5, B1885 HUDSON, PROV. BS AS
+              </span>
+            </p>
+          </div>
+
+          <!-- Segundo div (mapa), alineado a la izquierda en pantallas de escritorio -->
+          <div class="">
+            <div class="w-full flex justify-center md:order-1 md:mt-8">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.904601691586!2d-58.17303082440544!3d-34.80834187288151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a327f694931af9%3A0x44f6d41ea1d0e890!2sJanos%20Hudson!5e0!3m2!1ses-419!2sar!4v1736531536276!5m2!1ses-419!2sar"
+                class="md:w-96 rounded-lg h-48 md:h-80"             
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <!-- BUTTON GPS -->
+            <div class="mt-4">
+              <a
+                href="https://maps.app.goo.gl/WUxgo9vkDe7ERu2z6"
+                target="_blank"
+                class="flex items-center justify-center py-3 btn-2 color1 rounded-full shadow-lg border2"
+              >
+                <img
+                  id=""
+                  class="text-center w-4 mr-2"
+                  src="./assets/bg/icon-gps_1.svg"
+                  alt="logo"
+                />
+                Abrir mapa
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- a Chevron -->
+          <a
+          href="#sec4"
+          class="mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'sec4')"
+        >
+          <img
+            class="w-12 sombra-2 animate__animated animate__pulse animate__infinite animate__slow hover:animate__bounce animate__delay-2s animate__duration-1500"
+            src="assets/bg/icon-chevron-down.svg"
+            alt="chevron-down"
+          />
+        </a>  
+      </div>
+
+      <!-- ----------- SECCION 4 ---------------- -->
+      <div
+        id="sec4"
+        class="relative h-screen flex flex-col justify-center items-center text-center"
+      >
+        <h2 class="font4 size9 sm:text-2xl md:text-2xl lg:size-6">
+          Un Presente para Este Día Especial
+        </h2>
+        <p
+          class="text-center size-10 mt-16 mx-14 leading-loose"
+        >
+        <span class="font-semibold"> El mayor regalo es que vengas a disfrutar conmigo.</span>        
+        </p>
+
+        <p
+        class="escalera escalera-1 text-center size-10 mt-5 mx-14 leading-loose"
+      >        
+        pero si me queres hacer un regalo podés enviarmelo a este 
+        <span class="font-semibold">alias </span>:
+      </p>
+
+        <!-- ------------------- -->
+
+        <div class="flex justify-center justify-center space-x-2 mt-8 w-full md:w-1/2">
+          <!-- Campo de alias/CVU no editable -->
+          <input
+            type="text"
+            id="aliasInput"
+            value="delfina.chain"
+            class="border2 w-2/4 lg:w-full p-4 borde-2 rounded-l-full text-gray-600 color3-bg shadow-lg cursor-default"
+            readonly
+          />
+
+          <!-- Botón de copiar -->
+          <button
+            onclick="copiarAlPortapapeles()"
+            class="border2 lg:w-1/4 flex flex-row justify-center items-center gap-1 px-3 py-2 btn-2 shadow-lg text-white rounded-r-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            <img
+              class="w-5 opacity-90"
+              src="assets/bg/icon-copy-white.svg"
+              alt="copiar"
+            />
+            Copiar
+          </button>
+        </div>
+
+        <!-- Notificación de copiado -->
+        <div
+          id="notification"
+          class="hidden p-2 mt-14 bottom-36 absolute color11-bg text-white rounded-md shadow-lg"
+        >
+          ¡Alias/CVU copiado!
+        </div>
+
+        <!-- ------------------- -->
+
+          <a
+          href="#sec5"
+          class="mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          onclick="scrollAndAnimate(event, 'sec5')"
+        >
+          <img
+            class="w-12 sombra-2 animate__animated animate__pulse animate__infinite animate__slow hover:animate__bounce animate__delay-2s animate__duration-1500"
+            src="assets/bg/icon-chevron-down.svg"
+            alt="chevron-down"
+          />
+        </a>  
+      </div>
+
+      <!-- ----------- SECCION 5 ---------------- -->
+      <div
+        id="sec5"
+        class="h-screen flex flex-col justify-center items-center text-center"
+      >
+        <h2 class="mt-14 font4 size9 sm:text-2xl md:text-2xl lg:size-6">
+          El tema que no puede faltar
+        </h2>
+        <p
+          class="text-center size-10 mt-16 mx-10 leading-loose"
+        >
+        <span class="font-semibold">¿Qué canción crees que no puede faltar en la fiesta?</span>        
+        </p>
+
+        <p
+        class="text-center size-10 mx-10 leading-loose"
+        >               
+        ¡Agrégala en la playlist!      
+        </p>
+
+        <p
+        class="text-center size-10 mt-8 mx-10 leading-loose"
+        > 
+        <span class="font-semibold">Si no tenes cuenta en spotify, 
+          Solo tenes que registrarte,</span>      
+        </p>
+
+        <p
+        class="text-center size-10 mx-10 leading-loose"
+        >                      
+         es sin costo ¡Es muy sencillo!
+        </p>
+
+        <!-- ------------------- -->
+
+        <div class="flex justify-center justify-center space-x-2 mt-8 w-full">
+          <a
+          href="https://open.spotify.com/playlist/6zLCzBYoFby53RzvOHu2rP?si=J_zDG-7RQV6LlFLQgAbOGQ"
+          target="_blank"
+          class="cta-button flex items-center justify-center py-3 px-6 btn-2 color1 rounded-full shadow-lg border2 mt-8 mx-2 transition-all duration-300 ease-in-out"
+        >
+          <img
+            class="text-center w-6 mr-2"
+            src="./assets/bg/icon-spotify.svg"
+            alt="logo"
+          />
+          Playlist en <strong class="p-1">Spotify</strong>
+        </a>   
+        </div>   
+
+        <!-- ------------------- -->
+        <a
+        href="#sec6"
+        class="mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+        onclick="scrollAndAnimate(event, 'sec6')"
+      >
+        <img
+          class="w-12 sombra-2 animate__animated animate__pulse animate__infinite animate__slow hover:animate__bounce animate__delay-2s animate__duration-1500"
+          src="assets/bg/icon-chevron-down.svg"
+          alt="chevron-down"
+        />
+      </a>             
+      </div>
+      <!-- ----------- SECCION 6 ---------------- -->
+      <div id="sec6" class="relative flex flex-col items-center mx-1 pb-40 mt-24">
+        <h2 id="header" class="font4 size8 sm:text-2xl md:text-2xl lg:size-6 pb-8">
+          15 Años de Recuerdos
+        </h2>      
+        <!-- Galería -->
+
+        <!-- --------------------------Version Movil (galeria) -->
+        <div class="block md:hidden lg:hidden">        
+          <div id="bloque1y2" data-content>
+            <!-- bloque 1 -->
+            <div class="grid grid-rows-3 grid-flow-col gap-1 w-full h-80">
+
+              <div class="row-span-3 bg-gray-400 rounded-md relative" id="image1">              
+                <!-- foto 1 -->
+                <img
+                  src="./assets/img/delfi-1.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />              
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 2 -->
+
+              <div class="col-span-2 bg-gray-400 rounded-md relative" id="image2">
+                <img
+                  src="./assets/img/delfi-2.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md cursor-pointer modal-image"
+                  style="object-position: 50% 20%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />              
+                  <!-- Ícono corazón -->              
+                  <div class="like-container relative">
+                    <img
+                      class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                      src="./assets/bg/icon-like4-v.svg"
+                      alt="corazon"
+                      data-unliked="./assets/bg/icon-like4-v.svg"
+                      data-liked="./assets/bg/icon-like.svg"
+                    />
+                    <div class="lottieHeartContainer z-30 hidden"></div>
+                  </div>
+              </div>
+
+              <div class="row-span-2 col-span-2 bg-gray-400 rounded-md relative" id="image3">
+                <img
+                  src="./assets/img/delfi-3.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- bloque 2 -->
+            <div class="grid grid-cols-3 gap-1 w-full mt-1">
+              <div class="col-span-2 bg-gray-300 h-50 rounded-md relative" id="image4">
+                <img
+                  src="./assets/img/delfi-4.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="bg-gray-300 rounded-md relative" id="image5">
+                <img
+                  src="./assets/img/delfi-5.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="bloque3y4"
+            class="hidden md:block opacity-0 transform scale-95 transition duration-500 ease-out"
+            data-content
+          >
+            <!-- bloque 3 -->
+            <div class="grid grid-rows-3 grid-flow-col gap-1 w-full h-80 mt-1">
+              <div class="row-span-3 bg-gray-400 rounded-md relative" id="image6">
+                <!-- foto 1 -->
+                <img
+                  src="./assets/img/delfi-6.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 2 -->
+
+              <div class="col-span-2 bg-gray-400 rounded-md relative" id="image7">
+                <img
+                  src="./assets/img/delfi-7.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="row-span-2 col-span-2 bg-gray-400 rounded-md relative" id="image8">
+                <img
+                  src="./assets/img/delfi-8.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 10%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- bloque 4 -->
+            <div class="grid grid-cols-3 gap-1 w-full mt-1">
+              <div class="col-span-2 bg-gray-300 h-50 rounded-md relative" id="image9">
+                <img
+                  src="./assets/img/delfi-10.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="bg-gray-300 rounded-md relative" id="image10">
+                <img
+                  src="./assets/img/delfi-9.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 30% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="bloque5y6"
+            class="hidden md:block opacity-0 transform scale-95 transition duration-500 ease-out"
+            data-content
+          >
+            <!-- bloque 5 -->
+            <div class="grid grid-rows-3 grid-flow-col gap-1 w-full h-80 mt-1">
+              <div class="row-span-3 bg-gray-400 rounded-md relative" id="image11">
+                <!-- foto 1 -->
+                <img
+                  src="./assets/img/delfi-13.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 2 -->
+
+              <div class="col-span-2 bg-gray-400 rounded-md relative" id="image12">
+                <img
+                  src="./assets/img/delfi-11.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 20%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="row-span-2 col-span-2 bg-gray-400 rounded-md relative" id="image13">
+                <img
+                  src="./assets/img/delfi-12.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- bloque 6 -->
+            <div class="grid grid-cols-3 gap-1 w-full mt-1">
+              <div class="col-span-2 bg-gray-300 h-50 rounded-md relative" id="image14">
+                <img
+                  src="./assets/img/delfi-16.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="bg-gray-300 rounded-md relative" id="image15">
+                <img
+                  src="./assets/img/delfi-15.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 40% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <div class="col-span-3 bg-gray-300 h-80 rounded-md relative" id="image16">
+                <img
+                  src="./assets/img/delfi-14.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 20% 15%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 opacity-0 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="font4 size8 sm:text-2xl md:text-2xl lg:size-6 pulse-animation">
+              ¡Espero verte!
+            </p>        
+          </div>
+        </div>
+        <!-- --------------------------Version Escritorio (galeria) -->
+
+        <div class="hidden md:grid w-full">        
+          <div class="w-full">            
+            <div class="grid grid-flow-col gap-1 w-full">
+
+               <!-- foto 1 -->              
+              <div class="col-span-1 bg-gray-400 rounded-md relative group">           
+               
+                <img
+                  src="./assets/img/delfi-1.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />              
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 2 -->
+              <div class="col-span-1 bg-gray-400 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-2.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md cursor-pointer modal-image"
+                  style="object-position: 50% 20%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />              
+                  <!-- Ícono corazón -->              
+                  <div class="like-container relative">
+                    <img
+                      class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                      src="./assets/bg/icon-like4-v.svg"
+                      alt="corazon"
+                      data-unliked="./assets/bg/icon-like4-v.svg"
+                      data-liked="./assets/bg/icon-like.svg"
+                    />
+                    <div class="lottieHeartContainer z-30 hidden"></div>
+                  </div>
+              </div>
+
+              <!-- foto 3 -->
+              <div class="row-span-1 col-span-2 bg-gray-400 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-3.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 4 -->
+              <div class="col-span-1 bg-gray-300 h-50 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-4.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 5 -->
+              <div class="col-span-1 bg-gray-300 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-5.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 6 -->
+              <div class="col-span-1 bg-gray-400 rounded-md relative group">
+                <!-- foto 1 -->
+                <img
+                  src="./assets/img/delfi-6.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color9-bg rounded-full p-1 cursor-pointer  opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 7 -->               
+              <div class="col-span-1 bg-gray-400 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-7.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 color9-bg right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 8 -->
+              <div class="row-span-1 col-span-2 bg-gray-400 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-8.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 10%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 9 -->
+              <div class="col-span-1 bg-gray-300 h-50 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-10.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 10 -->
+              <div class="col-span-1 bg-gray-300 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-9.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 30% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+              <!-- foto 11 -->
+              <div class="col-span-1 row-span-3 bg-gray-400 rounded-md relative group">
+                <!-- foto 1 -->
+                <img
+                  src="./assets/img/delfi-13.jpg"
+                  alt="Imagen 1"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 12 -->               
+              <div class="col-span-1 bg-gray-400 rounded-md relative group group">
+                <img
+                  src="./assets/img/delfi-11.jpg"
+                  alt="Imagen 2"
+                  class="h-40 w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 50% 20%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 13 -->               
+              <div class="col-span-1 col-span-2 bg-gray-400 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-12.jpg"
+                  alt="Imagen 3"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 14 --> 
+              <div class="col-span-1 bg-gray-300 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-15.jpg"
+                  alt="Imagen 5"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 40% 40%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>
+
+              <!-- foto 15 -->
+              <div class="col-span-1 col-span-2 bg-gray-300 h-50 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-16.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div> 
+
+              <!-- foto 16 -->               
+              <div class="col-span-1 bg-gray-300 rounded-md relative group">
+                <img
+                  src="./assets/img/delfi-14.jpg"
+                  alt="Imagen 4"
+                  class="w-full h-full object-cover rounded-md  cursor-pointer modal-image"
+                  style="object-position: 20% 15%"
+                  onclick="openModal(this)"
+                />
+                <img
+                  src="./assets/bg/icon-lupa.svg"
+                  alt="lupa"
+                  onclick="openModal(this.previousElementSibling)"
+                  class="absolute color9-bg top-2 right-2 w-6 h-6 color4-bg rounded-full p-1 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                />
+                <!-- Ícono corazón -->              
+                <div class="like-container relative">
+                  <img
+                    class="heartButton absolute color10-bg bottom-2 left-2 w-6 h-6 rounded-full p-1 cursor-pointer like-btn"
+                    src="./assets/bg/icon-like4-v.svg"
+                    alt="corazon"
+                    data-unliked="./assets/bg/icon-like4-v.svg"
+                    data-liked="./assets/bg/icon-like.svg"
+                  />
+                  <div class="lottieHeartContainer z-30 hidden"></div>
+                </div>
+              </div>              
+            </div>
+          </div>   
+
+        </div>
+
+        <p class="mt-14 hidden md:flex font4 size8 sm:text-2xl md:text-2xl lg:size-6">
+          ¡Espero verte!
+        </p>     
+
+        <!-- -----------------Modal -->
+        <div
+          id="imageModal"
+          class="fixed inset-0 flex items-center justify-center color8-bg hidden z-20"
+        >
+          <div class="relative">
+            <button
+              class="absolute color9-bg top-2 right-2 text-white text-2xl font-bold color6-bg w-6 h-6 rounded-full flex items-center justify-center cursor-pointer"
+              onclick="closeModal()"
+            >
+              &times;
+            </button>
+
+            <button
+              id="prevButton"
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
+              onclick="prevImage()"
+            >
+              &#8249;
+            </button>
+
+            <img
+              id="modalImage"
+              src=""
+              alt="Imagen ampliada"
+              class="max-w-full max-h-modal shadow-lg rounded-lg overflow-hidden"
+            />
+
+            <button
+              id="nextButton"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
+              onclick="nextImage()"
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>  
+
+        <!-- BUTTON "Ver mas" -->
+
+        <button
+          id="showMoreBtn"
+          class="flex flex-row items-center justify-center gap-1 w-40 mt-4 px-4 py-2 btn-2 border2 text-white rounded-full shadow-lg hover:bg-blue-600 md:hidden"
+        >
+          <img
+              class="w-4 opacity-90"
+              src="assets/bg/icon-galery.svg"
+              alt="copiar"
+            />
+          Ver más
+        </button>
+      </div>    
+  
+    <!-- --------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="animation.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

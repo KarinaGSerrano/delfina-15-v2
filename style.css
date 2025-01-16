@@ -1,0 +1,505 @@
+html,
+body {
+  height: 100%; /* Asegura que ocupen todo el alto de la ventana */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina rellenos por defecto */
+}
+
+/* PALETA DE COLORES */
+.color1-bg {
+  background: rgb(242, 224, 212);
+}
+
+.color2-bg {
+  background: rgb(22, 16, 18);
+}
+
+.color3-bg {
+  background: rgba(237, 233, 227, 1);
+}
+
+.color4-bg {
+  background: rgb(61, 40, 11);
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    180deg,
+    rgb(17, 13, 14) 4%,
+    rgb(28, 22, 25) 25%,
+    rgb(39, 32, 36) 50%,
+    rgb(28, 22, 25) 75%,
+    rgb(17, 13, 14) 96%
+  );
+  height: 100%; /* Ocupa todo el alto del contenedor */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.gradient-gh-light {
+  background: linear-gradient(
+    0deg,
+    rgba(237, 233, 227, 1) 0%,
+    rgba(242, 231, 219, 1) 25%,
+    rgb(235, 218, 206) 50%,
+    rgba(242, 231, 219, 1) 75%,
+    rgba(237, 233, 227, 1) 100%
+  );
+}
+
+.box-bg-white {
+  /* background: rgba(244, 244, 244, 0.622); */
+  background: linear-gradient(
+    0deg,
+    rgba(220, 198, 182, 0.573) 10%,
+    rgba(235, 232, 228, 0.646) 40%,
+    rgba(235, 226, 222, 0.628) 50%,
+    rgba(235, 232, 228, 0.684) 60%,
+    rgba(255, 247, 235, 0.565) 90%
+  );
+}
+
+.color-box-main {
+  background: rgba(255, 253, 251, 0.622);
+  border-radius: 25px;
+}
+
+.color1 {
+  color: rgb(244, 244, 244);
+}
+
+.color2 {
+  color: rgb(216, 178, 195);
+}
+
+.color3 {
+  color: antiquewhite;
+}
+
+.color4 {
+  color: rgb(172, 142, 103);
+}
+
+.color5 {
+  color: rgb(94, 62, 21);
+}
+
+.color7 {
+  color: rgb(67, 45, 15);
+}
+
+.color6 {
+  color: #d27b74;
+}
+
+.color5-bg {
+  background: linear-gradient(90deg, #d27b74, #e59a96, #d39aab);
+}
+
+.color6-bg {
+  background: #d27b74;
+}
+
+.color7-bg {
+  background: #d7c6c4e7;
+}
+
+.color8-bg {
+  background: linear-gradient(90deg, #613835ee, #6c4846ee, #4b353bee);
+}
+
+.color9-bg {
+  background: rgba(67, 45, 15, 0.111);
+}
+
+.color10-bg {
+  background: rgba(67, 45, 15, 0.369);
+}
+
+.color11-bg {
+  background: rgb(208, 167, 185);
+}
+
+/* BUTTONS */
+.btn-2 {
+  background: linear-gradient(90deg, #d17069 5%, #e28a85 50%, #cf8a9e 90%);
+}
+
+.btn-hover:hover {
+  background: linear-gradient(90deg, #d7b7c0, #ecbbb9, #f0b9b5);
+}
+
+/* FONTS */
+.font1 {
+  font-family: 'Playwrite ZA', serif;
+}
+
+.font2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+.font3 {
+  font-family: 'Montserrat', serif;
+}
+
+@font-face {
+  font-family: 'pinyon'; /* Nombre que usarás en CSS */
+  src: url('./assets/fonts/Pinyon_Script/PinyonScript-Regular.ttf')
+    format('woff2'); /* Formato moderno */
+  font-weight: normal; /* Opcional: Especifica el grosor */
+  font-style: normal; /* Opcional: Especifica si es cursiva */
+}
+
+.font4 {
+  font-family: 'pinyon', serif;
+}
+
+/* size */
+
+.size1 {
+  font-size: 15rem;
+}
+
+.size2 {
+  font-size: 4rem;
+}
+
+.size3 {
+  font-size: 4rem;
+}
+
+.size4 {
+  font-size: 1.3rem;
+}
+
+.size5 {
+  font-size: 1.8rem;
+}
+
+.size6 {
+  font-size: 7rem;
+}
+
+.size7 {
+  font-size: 3rem;
+}
+
+.size8 {
+  font-size: 2.6rem;
+}
+
+.size9 {
+  font-size: 2.2rem;
+}
+
+.heightVh {
+  height: 50vh;
+}
+
+.max-h-modal {
+  max-height: 75vh;
+}
+
+/* WEIGHT */
+
+.weight1 {
+  font-weight: 200;
+}
+
+/* BORDE */
+
+.border1 {
+  border-top: 1px solid rgba(94, 62, 21, 0.873);
+  border-bottom: 1px solid rgba(94, 62, 21, 0.873);
+}
+
+.border2 {
+  border: 1px solid rgba(69, 46, 14, 0.45);
+}
+
+/* SHADOW */
+.shadow1 {
+  filter: drop-shadow(0 3px 4px rgba(28, 26, 27, 0.898));
+}
+
+.shadow3 {
+  filter: drop-shadow(0 2px 4px rgb(247, 243, 242));
+}
+
+.border-ang {
+  border-radius: 20px;
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgba(207, 178, 166, 0.1),
+    0 2px 4px -1px rgba(210, 190, 180, 0.06);
+}
+
+#menuLogo {
+  filter: drop-shadow(0 3px 4px rgba(170, 149, 132, 0.898));
+}
+
+.shadow2 {
+  filter: drop-shadow(0 5px 10px rgba(170, 149, 132, 0.898));
+}
+
+/* EFECTOS */
+
+.glow-effect {
+  color: white; /* Color del texto */
+  /* text-shadow: 0 0 10px rgba(2, 2, 2, 0.6), 0 0 10px rgba(2, 2, 2, 0.6),
+    0 0 20px rgba(2, 2, 2, 0.6); */
+  animation: glow 3s infinite alternate; /* Animación infinita */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 1px rgba(233, 193, 220, 0.6), 0 0 2px rgba(233, 193, 220, 0.6);
+  }
+  30% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 2px rgba(233, 193, 220, 0.6), 0 0 4px rgba(233, 193, 220, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(233, 193, 220, 0.6), 0 0 20px rgba(233, 193, 220, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(167, 85, 136, 0.633), 0 0 40px rgba(167, 85, 136, 0.633);
+  }
+}
+
+/* PROBANDING */
+
+/* Opcional: Agregar una transición suave para el menú */
+#mainMenu {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* menu inferior test */
+.nav-item {
+  position: relative; /* Necesario para posicionar el SVG detrás */
+}
+
+.nav-item img {
+  z-index: 10; /* El ícono original debe estar delante del fondo */
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px; /* Ajusta al tamaño del SVG */
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.5s ease; /* Suaviza la transición */
+  z-index: 1; /* Detrás del ícono */
+  filter: drop-shadow(0 5px 10px rgb(255, 255, 255));
+}
+
+.nav-item.selected::before {
+  opacity: 1; /* Aparece al estar seleccionado */
+}
+
+.nav-item[data-selected-src]::before {
+  background-image: var(--selected-src);
+}
+
+/* galeria de fotos----- */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* estilo modal animacion */
+
+/* .hidden {
+  display: none;
+} */
+
+#imageModal {
+  opacity: 0; /* Comienza invisible */
+  transform: scale(0.99); /* Comienza con un ligero escalado */
+  transition: opacity 0.1s ease, transform 0.5s ease; /* Transición suave */
+}
+
+#imageModal.show {
+  display: flex; /* Se asegura de que el modal sea visible */
+  opacity: 1; /* Lo hace visible */
+  transform: scale(1); /* Lo escala al tamaño normal */
+}
+
+/* animacion toggle */
+
+/* TEST */
+
+.like-container {
+  position: relative;
+}
+
+.lottieHeartContainer {
+  /* position: absolute; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 30rem;
+  /* display: none; */
+}
+
+.like-container {
+  position: relative;
+}
+
+.lottieFavContainer {
+  /* position: absolute; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 30rem;
+  /* display: none; */
+}
+
+/* chevron animacion */
+
+/* Animación de pulso personalizada */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+/* animacion buttons "call to action" */
+
+/* Animación de entrada */
+/* Animación de respiración */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Botón con animación constante */
+.cta-button {
+  animation: breathing 2s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto hover adicional */
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* animacion card ubicacion */
+
+/* Estado inicial del card */
+#cardUbicacion {
+  opacity: 0;
+  transform: translateX(
+    -100px
+  ); /* Mueve el card hacia la izquierda inicialmente */
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+/* Estado final al estar en foco */
+#cardUbicacion.show {
+  opacity: 1;
+  transform: translateX(0); /* Regresa a su posición original */
+}
+
+/* style que no estaria pudiendo aplicar*/
+
+.pad {
+  padding-bottom: 10rem;
+}
+
+/* ICONO-LUPA ESCRITORIO */
+.relative {
+  position: relative;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group-hover\:opacity-100 {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* lupa movil */
+
+.img-visible {
+  opacity: 1;
+}
+
+/* --------animacion encabezado */
+#header {
+  opacity: 0;
+  transform: translateX(
+    -100px
+  ); /* Empieza desde el lado izquierdo fuera de pantalla */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#sec6.visible #header {
+  opacity: 1;
+  transform: translateX(0); /* Cuando se vuelve visible, entra suavemente */
+}
+
+/* ------------animacion <p> */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1.5s infinite ease-in-out;
+}
