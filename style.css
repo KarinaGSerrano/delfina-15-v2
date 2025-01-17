@@ -510,7 +510,7 @@ body {
 }
 
 /* ESTILO PANTALLAS MENOS DE 360 */
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .width-380-1 {
     width: 11rem;
   }
