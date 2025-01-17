@@ -503,3 +503,72 @@ body {
 .pulse-animation {
   animation: pulse 1.5s infinite ease-in-out;
 }
+
+/* clases contra a la resolucion 380 */
+.width-plus-1 {
+  width: 15rem;
+}
+
+/* ESTILO PANTALLAS MENOS DE 360 */
+@media (max-width: 380px) {
+  .width-380-1 {
+    width: 11rem;
+  }
+
+  .width-380-2 {
+    width: 9rem;
+  }
+
+  .width-380-3 {
+    width: 3rem;
+  }
+
+  .height-380-1 {
+    height: 7rem;
+  }
+
+  .pad-right-none {
+    padding-right: 0;
+  }
+
+  .size380-1 {
+    font-size: 1rem;
+  }
+
+  .size380-2 {
+    font-size: 1.5rem;
+  }
+
+  .size380-3 {
+    font-size: 3.8rem;
+  }
+
+  .size380-4 {
+    font-size: 1.1rem;
+  }
+
+  .size380-5 {
+    font-size: 2.2rem;
+  }
+
+  .size380-6 {
+    font-size: 1.8rem;
+  }
+
+  .size380-7 {
+    font-size: 0.8rem;
+  }
+
+  .marg380-1 {
+    margin-top: 1.5rem;
+  }
+
+  .marg-x-380 {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .marg380-none {
+    margin-top: 0;
+  }
+}
