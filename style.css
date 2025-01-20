@@ -5,6 +5,18 @@ body {
   padding: 0; /* Elimina rellenos por defecto */
 }
 
+/* ---------------Scrollbar----------------- */
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #d0cfcf;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d27b74;
+  border-radius: 7px;
+}
+
 /* PALETA DE COLORES */
 .color1-bg {
   background: rgb(242, 224, 212);
@@ -515,18 +527,6 @@ body {
 
 .width-lg-2 {
   width: 15rem;
-}
-
-/* ---------------Scrollbar----------------- */
-
-body::-webkit-scrollbar {
-  width: 12px;
-  background: #d0cfcf;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #d27b74;
-  border-radius: 7px;
 }
 
 /* ESTILO PANTALLAS MENOS DE 343 */
