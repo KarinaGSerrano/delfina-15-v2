@@ -23,7 +23,7 @@
     <title>Delfina 15</title>
   </head>
   <body
-    class="container text-center gradient-gh-light color7 mx-auto font3 size4"
+    class="container text-center gradient-gh-light color7 mx-auto font3 size4 overflow-x-hidden"
   >
     <!-- FONDO FIJO -->
     <div
@@ -176,10 +176,10 @@
         <div class="relative -mt-20 flex flex-col justify-center">
           <img
             src="./assets/bg/del-cur-ele2.svg"
-            class="width-plus-1 width-380-2 width-620-1 mx-auto mt-16 pr-4 pad-right-none"            
+            class="width-lg-1 width-380-2 width-620-1 mx-auto mt-16 pr-4 pad-right-none"            
             alt="15"
           />
-          <img src="./assets/bg/15-s.svg" class="width-380-1 width-620-2 w-80 -mt-10" alt="15" />
+          <img src="./assets/bg/15-s.svg" class="width-380-1 width-620-2 width-lg-2 -mt-10" alt="15" />
         </div>
 
         <p class="size380-1 size4 font3 color5 mx620-1 mx-24 leading-relaxed">
@@ -202,7 +202,7 @@
         <!-- a Chevron -->
           <a
           href="#sec2"
-          class="marg620-none mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
+          class="marg620-none marg380-none mt-11 px-4 py-2 rounded transition-all hover:shadow-lg active:scale-100"
           onclick="scrollAndAnimate(event, 'sec2')"
         >
           <img
@@ -294,7 +294,7 @@
               <img
                 src="./assets/bg/janos-hudson.svg"
                 alt="janos"
-                class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/5 block width-380-3"
+                class="w-1/3 sm:w-1/3 md:w-1/4 lg:w-1/3 block width-380-3"
               />
             </div>
             <p class="display620-none fuente-3 size-7 font-normal size380-7">SALÓN DE EVENTOS.</p>
@@ -307,11 +307,10 @@
 
           <!-- Segundo div (mapa), alineado a la izquierda en pantallas de escritorio -->
           <div class="">
-            <div class="w-full flex justify-center md:order-1 md:mt-8">
+            <div class="w-full flex justify-center md:order-1 lg:mt-2">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.904601691586!2d-58.17303082440544!3d-34.80834187288151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a327f694931af9%3A0x44f6d41ea1d0e890!2sJanos%20Hudson!5e0!3m2!1ses-419!2sar!4v1736531536276!5m2!1ses-419!2sar"
-                class="md:w-96 rounded-lg h-48 md:h-80 height-380-1"             
-                style="border: 0"
+                class="md:w-96 rounded-lg h-48 md:h-80 height-380-1 shadow-lg"            
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -319,7 +318,7 @@
             </div>
 
             <!-- BUTTON GPS -->
-            <div class="mt-4">
+            <div class="mt-4 mb-2">
               <a
                 href="https://maps.app.goo.gl/WUxgo9vkDe7ERu2z6"
                 target="_blank"
@@ -963,7 +962,7 @@
         </div>
         <!-- --------------------------Version Escritorio (galeria) -->
 
-        <div class="hidden md:grid w-full">        
+        <div class="hidden md:grid w-full w-screen overflow-x-hidden">        
           <div class="w-full">            
             <div class="grid grid-flow-col gap-1 w-full">
 

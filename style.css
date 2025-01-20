@@ -509,6 +509,26 @@ body {
   width: 15rem;
 }
 
+.width-lg-1 {
+  width: 13rem;
+}
+
+.width-lg-2 {
+  width: 15rem;
+}
+
+/* ---------------Scrollbar----------------- */
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #d0cfcf;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d27b74;
+  border-radius: 7px;
+}
+
 /* ESTILO PANTALLAS MENOS DE 343 */
 @media (max-width: 420px) {
   .width-380-1 {
