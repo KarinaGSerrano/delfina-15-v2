@@ -203,10 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Función para abrir el modal--------------
+// Función para abrir el modal--------------------------------------
 let currentImageIndex = 0;
 let images = [];
 
+// Función para abrir el modal
 function openModal(imageElement) {
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
@@ -228,8 +229,12 @@ function openModal(imageElement) {
 
   // Deshabilitar el scroll del fondo
   document.body.classList.add('overflow-hidden');
+
+  // Disparar evento 'show' para activar el teclado
+  modal.dispatchEvent(new Event('show'));
 }
 
+// Función para cerrar el modal
 function closeModal() {
   const modal = document.getElementById('imageModal');
 
@@ -239,8 +244,12 @@ function closeModal() {
 
   // Habilitar el scroll del fondo
   document.body.classList.remove('overflow-hidden');
+
+  // Disparar evento 'hide' para desactivar el teclado
+  modal.dispatchEvent(new Event('hide'));
 }
 
+// Función para mostrar la imagen anterior
 function prevImage() {
   if (images.length === 0) return;
 
@@ -249,6 +258,7 @@ function prevImage() {
   document.getElementById('modalImage').src = images[currentImageIndex];
 }
 
+// Función para mostrar la imagen siguiente
 function nextImage() {
   if (images.length === 0) return;
 
@@ -257,7 +267,34 @@ function nextImage() {
   document.getElementById('modalImage').src = images[currentImageIndex];
 }
 
-// --------------
+// Función para manejar las teclas
+function handleKeyPress(event) {
+  switch (event.key) {
+    case 'Escape': // Cerrar modal con Esc
+      closeModal();
+      break;
+    case 'ArrowLeft': // Imagen anterior con flecha izquierda
+      prevImage();
+      break;
+    case 'ArrowRight': // Imagen siguiente con flecha derecha
+      nextImage();
+      break;
+    default:
+      break;
+  }
+}
+
+// Agregar evento al abrir el modal
+document.getElementById('imageModal').addEventListener('show', () => {
+  document.addEventListener('keydown', handleKeyPress);
+});
+
+// Remover evento al cerrar el modal
+document.getElementById('imageModal').addEventListener('hide', () => {
+  document.removeEventListener('keydown', handleKeyPress);
+});
+
+// --------------------------------------
 
 //button ver mas
 
@@ -405,5 +442,3 @@ const observer = new IntersectionObserver(
 
 const heading = document.querySelector('#animatedHeading');
 observer.observe(heading);
-
-// NO SCROLL
