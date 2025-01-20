@@ -838,8 +838,8 @@ body::-webkit-scrollbar-thumb {
 
 /* probandin scroll sec */
 
-section {
-  height: 100vh; /* Simula una sección completa de pantalla */
+.section {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -852,7 +852,7 @@ section {
 
 @keyframes highlightFade {
   0% {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 215, 0, 0.3); /* Amarillo claro */
   }
   100% {
     background-color: transparent;

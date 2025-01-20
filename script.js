@@ -451,36 +451,35 @@ function scrollAndAnimate(event, sectionId) {
   const targetElement = document.getElementById(sectionId);
   if (!targetElement) return;
 
-  const targetPosition = targetElement.offsetTop;
   const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 1000; // Duración en milisegundos (ajústalo para más o menos velocidad)
+  const targetPosition =
+    targetElement.getBoundingClientRect().top + startPosition;
+  const duration = 1200; // Duración en milisegundos (ajústalo a tu preferencia)
   let startTime = null;
 
   function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
+    if (!startTime) startTime = currentTime;
 
-    const timeElapsed = currentTime - startTime;
-    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1); // Limitar el progreso a 1
+    const ease = easeInOutCubic(progress);
 
-    window.scrollTo(0, run);
+    window.scrollTo(0, startPosition + (targetPosition - startPosition) * ease);
 
-    if (timeElapsed < duration) {
+    if (elapsedTime < duration) {
       requestAnimationFrame(animation);
     } else {
-      // Agregar clase de resaltado al final del scroll
+      // Opcional: Agregar un efecto visual al llegar a la sección
       targetElement.classList.add('highlight');
       setTimeout(() => {
         targetElement.classList.remove('highlight');
-      }, 1000);
+      }, 1000); // Duración del efecto de resaltado
     }
   }
 
-  function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
+  // Función de easing para un desplazamiento suave
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
 
   requestAnimationFrame(animation);
