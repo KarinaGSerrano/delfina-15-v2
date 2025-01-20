@@ -328,6 +328,11 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+/* Clase para desactivar el scroll en el body */
+.no-scroll {
+  overflow: hidden;
+}
+
 /* estilo modal animacion */
 
 /* .hidden {

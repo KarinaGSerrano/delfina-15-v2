@@ -405,3 +405,18 @@ const observer = new IntersectionObserver(
 
 const heading = document.querySelector('#animatedHeading');
 observer.observe(heading);
+
+// NO SCROLL
+
+const modal = document.getElementById('myModal');
+const body = document.body;
+
+function openModal() {
+  modal.style.display = 'block'; // Muestra el modal
+  body.classList.add('no-scroll'); // Desactiva el scroll en el fondo
+}
+
+function closeModal() {
+  modal.style.display = 'none'; // Oculta el modal
+  body.classList.remove('no-scroll'); // Reactiva el scroll en el fondo
+}
