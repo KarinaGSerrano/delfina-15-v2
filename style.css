@@ -837,24 +837,3 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* probandin scroll sec */
-
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-
-.section.highlight {
-  animation: highlightFade 1s ease-in-out;
-}
-
-@keyframes highlightFade {
-  0% {
-    background-color: rgba(255, 215, 0, 0.3); /* Amarillo claro */
-  }
-  100% {
-    background-color: transparent;
-  }
-}

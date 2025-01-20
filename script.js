@@ -451,38 +451,19 @@ function scrollAndAnimate(event, sectionId) {
   const targetElement = document.getElementById(sectionId);
   if (!targetElement) return;
 
-  const startPosition = window.pageYOffset;
-  const targetPosition =
-    targetElement.getBoundingClientRect().top + startPosition;
-  const duration = 1200; // Duración en milisegundos (ajústalo a tu preferencia)
-  let startTime = null;
+  // Usar scrollIntoView con smooth nativo
+  targetElement.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
 
-  function animation(currentTime) {
-    if (!startTime) startTime = currentTime;
-
-    const elapsedTime = currentTime - startTime;
-    const progress = Math.min(elapsedTime / duration, 1); // Limitar el progreso a 1
-    const ease = easeInOutCubic(progress);
-
-    window.scrollTo(0, startPosition + (targetPosition - startPosition) * ease);
-
-    if (elapsedTime < duration) {
-      requestAnimationFrame(animation);
-    } else {
-      // Opcional: Agregar un efecto visual al llegar a la sección
-      targetElement.classList.add('highlight');
-      setTimeout(() => {
-        targetElement.classList.remove('highlight');
-      }, 1000); // Duración del efecto de resaltado
-    }
-  }
-
-  // Función de easing para un desplazamiento suave
-  function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-  }
-
-  requestAnimationFrame(animation);
+  // Agregar clase de resaltado al final de un tiempo fijo
+  setTimeout(() => {
+    targetElement.classList.add('highlight');
+    setTimeout(() => {
+      targetElement.classList.remove('highlight');
+    }, 5000); // Duración del efecto de resaltado
+  }, 300); // Ajusta este tiempo para que coincida con la duración del desplazamiento
 }
 
 // Agregar manejadores de eventos a los enlaces
