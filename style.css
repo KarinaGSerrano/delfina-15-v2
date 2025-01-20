@@ -131,6 +131,10 @@ body::-webkit-scrollbar-thumb {
   background: rgb(208, 167, 185);
 }
 
+.color12-bg {
+  background: rgb(232, 201, 214);
+}
+
 /* BUTTONS */
 .btn-2 {
   background: linear-gradient(90deg, #d17069 5%, #e28a85 50%, #cf8a9e 90%);
@@ -239,6 +243,10 @@ body::-webkit-scrollbar-thumb {
 
 .shadow3 {
   filter: drop-shadow(0 2px 4px rgb(247, 243, 242));
+}
+
+.shadow3 {
+  filter: drop-shadow(0 2px 4px rgb(238, 141, 206));
 }
 
 .border-ang {
@@ -836,4 +844,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* probandin scroll sec */
+/* Para pantallas más grandes (escritorio) */
+@media (min-width: 768px) {
+  .max-h-modal {
+    max-height: 80vh;
+  }
+}

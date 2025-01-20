@@ -473,3 +473,23 @@ document.querySelectorAll('.scroll-link').forEach((link) => {
     scrollAndAnimate(event, sectionId);
   });
 });
+
+// galeria fixed button
+
+document.addEventListener('scroll', () => {
+  const sec6 = document.querySelector('#sec6');
+  const indicator = document.querySelector('#indicator');
+
+  // Obtener las dimensiones de la sección 6
+  const rect = sec6.getBoundingClientRect();
+  const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+  // Mostrar o esconder el indicador
+  if (isInView) {
+    indicator.classList.remove('hidden');
+    indicator.classList.add('visible');
+  } else {
+    indicator.classList.remove('visible');
+    indicator.classList.add('hidden');
+  }
+});

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
     <!-- CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -12,6 +13,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="icon" href="./assets/bg/icon-header-3.svg" type="image/x-icon">
+
+
+        <!-- PREVIEW -->
+    <meta property="og:title" content="Mis 15 | Delfina">
+    <meta property="og:description" content="Te invito a celebrar conmigo.">
+    <meta property="og:image" content="./assets/img/foto-event.png">
+    <meta property="og:url" content="https://karinagserrano.github.io/delfina-15-v2/">
+    <meta property="og:type" content="event">
+
     <link rel="stylesheet" href="style.css" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -168,7 +179,7 @@
       </div>
     </div>
 
-    <main class="container relative mx-auto size380-1 no-scroll">
+    <main class="container relative mx-auto size380-1">
       <!-- Portada -->
       <div
         id="portada"
@@ -470,7 +481,7 @@
       </a>             
       </div>
       <!-- ----------- SECCION 6 ---------------- -->
-      <div id="sec6" class="relative flex flex-col items-center mx-1 pb-40 mt-24 overflow-x-hidden">
+      <div id="sec6" class="relative flex flex-col items-center mx-1 pb-40 mt-24">
         <h2 id="header" class="size620-3 font4 size8 sm:text-2xl md:text-2xl lg:size-6 pad380-none pb-8 padding620-b size380-5">
           15 Años de Recuerdos
         </h2>      
@@ -1453,9 +1464,20 @@
 
         </div>
 
-        <p class="mt-14 hidden md:flex font4 size8 sm:text-2xl md:text-2xl lg:size-6">
+        <p class="mt-14 hidden md:flex font4 size8 sm:text-2xl md:text-2xl lg:size-6 pulse-animation">
           ¡Espero verte!
-        </p>     
+        </p>
+       
+        <!-- contador fixed -->
+        <div id="likeIndicator" class="fixed bottom-44 right-4 color12-bg text-white px-2 py-2 border-ang shadow-lg flex items-center space-x-2 opacity-0 transition-opacity duration-300">
+          <img id="likeIcon" src="./assets/bg/icon-like.svg" class="w-5 transition-transform transform" />
+          <div id="likeCounter">
+            0
+          </div>
+        </div>
+
+               
+        
 
         <!-- -----------------Modal -->
           <div
