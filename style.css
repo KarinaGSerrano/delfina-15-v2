@@ -324,9 +324,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* galeria de fotos----- */
-.overflow-hidden {
+/* .overflow-hidden {
   overflow: hidden;
-}
+} */
 
 /* Clase para desactivar el scroll en el body */
 .no-scroll {
