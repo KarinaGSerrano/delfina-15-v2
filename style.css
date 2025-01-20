@@ -509,14 +509,14 @@ body {
   width: 15rem;
 }
 
-/* ESTILO PANTALLAS MENOS DE 360 */
-@media (max-width: 390px) {
+/* ESTILO PANTALLAS MENOS DE 343 */
+@media (max-width: 420px) {
   .width-380-1 {
-    width: 11rem;
+    width: 12rem;
   }
 
   .width-380-2 {
-    width: 9rem;
+    width: 11rem;
   }
 
   .width-380-3 {
@@ -570,5 +570,239 @@ body {
 
   .marg380-none {
     margin-top: 0;
+  }
+
+  .pad380-none {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-height: 620px) {
+  /* Estilos para pantallas más pequeñas de 600px de ancho y 800px de alto */
+
+  .width-620-1 {
+    width: 9rem;
+  }
+
+  .width-620-2 {
+    width: 10rem;
+  }
+
+  .mx620-1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .mx-none {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .size620-2 {
+    font-size: 1.2rem;
+  }
+
+  .size620-3 {
+    font-size: 1.8rem;
+  }
+
+  .size620-4 {
+    font-size: 2rem;
+  }
+
+  .padding620-t-b {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .marg620-none {
+    margin-top: 0;
+  }
+
+  .marg620-t {
+    margin-top: 0.7rem;
+  }
+  .line620-1 {
+    line-height: 35px;
+  }
+
+  .display620-none {
+    display: none;
+  }
+
+  .color6-620 {
+    color: #d27b74;
+    font-weight: bold;
+  }
+
+  .padding620-b {
+    padding-bottom: 0.6rem;
+  }
+
+  .padding620-y {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .padding-none {
+    padding: 0;
+  }
+
+  /* ---------- */
+
+  .width-380-3 {
+    width: 3rem;
+  }
+
+  .height-380-1 {
+    height: 7rem;
+  }
+
+  .pad-right-none {
+    padding-right: 0;
+  }
+
+  .size380-1 {
+    font-size: 1rem;
+  }
+
+  .size380-3 {
+    font-size: 3.8rem;
+  }
+
+  .size380-4 {
+    font-size: 1.1rem;
+  }
+
+  .size380-6 {
+    font-size: 1.8rem;
+  }
+
+  .size380-7 {
+    font-size: 0.8rem;
+  }
+
+  .marg380-1 {
+    margin-top: 1.5rem;
+  }
+
+  .marg-x-380 {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (width: 540px) and (height: 720px) {
+  /* Estilos para pantallas más pequeñas de 600px de ancho y 800px de alto */
+
+  .width-620-1 {
+    width: 9rem;
+  }
+
+  .width-620-2 {
+    width: 10rem;
+  }
+
+  .mx620-1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .mx-none {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .size620-2 {
+    font-size: 1.2rem;
+  }
+
+  .size620-3 {
+    font-size: 1.8rem;
+  }
+
+  .size620-4 {
+    font-size: 2rem;
+  }
+
+  .padding620-t-b {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .marg620-none {
+    margin-top: 0;
+  }
+
+  .marg620-t {
+    margin-top: 0.7rem;
+  }
+  .line620-1 {
+    line-height: 35px;
+  }
+
+  .display620-none {
+    display: none;
+  }
+
+  .color6-620 {
+    color: #d27b74;
+    font-weight: bold;
+  }
+
+  .padding620-b {
+    padding-bottom: 0.6rem;
+  }
+
+  .padding620-y {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .padding-none {
+    padding: 0;
+  }
+
+  /* ---------- */
+
+  .width-380-3 {
+    width: 3rem;
+  }
+
+  .height-380-1 {
+    height: 7rem;
+  }
+
+  .pad-right-none {
+    padding-right: 0;
+  }
+
+  .size380-1 {
+    font-size: 1rem;
+  }
+
+  .size380-3 {
+    font-size: 3.8rem;
+  }
+
+  .size380-4 {
+    font-size: 1.1rem;
+  }
+
+  .size380-6 {
+    font-size: 1.8rem;
+  }
+
+  .size380-7 {
+    font-size: 0.8rem;
+  }
+
+  .marg380-1 {
+    margin-top: 1.5rem;
+  }
+
+  .marg-x-380 {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
