@@ -1416,41 +1416,45 @@
         </p>     
 
         <!-- -----------------Modal -->
-        <div
-          id="imageModal"
-          class="fixed inset-0 flex items-center justify-center color8-bg hidden z-20 no-scroll"
-        >
+          <div
+            id="imageModal"
+            class="fixed inset-0 flex items-center justify-center color8-bg hidden z-20 no-scroll"
+          >
           <div class="relative">
+            <!-- Botón de cerrar el modal, fijado en la parte superior derecha -->
             <button
-              class="absolute color9-bg top-2 right-2 text-white text-2xl font-bold color6-bg w-6 h-6 rounded-full flex items-center justify-center cursor-pointer"
+              class="absolute top-2 right-2 text-white text-2xl font-bold w-6 h-6 rounded-full flex items-center justify-center cursor-pointer z-30"
               onclick="closeModal()"
             >
               &times;
             </button>
-
+          
+            <!-- Botón de la imagen anterior, fijado en el lado izquierdo -->
             <button
               id="prevButton"
-              class="absolute left-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
+              class="fixed left-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
               onclick="prevImage()"
             >
               &#8249;
             </button>
-
+          
+            <!-- Imagen del modal -->
             <img
               id="modalImage"
               src=""
               alt="Imagen ampliada"
               class="max-w-full max-h-modal shadow-lg rounded-lg overflow-hidden"
             />
-
+          
+            <!-- Botón de la imagen siguiente, fijado en el lado derecho -->
             <button
               id="nextButton"
-              class="absolute right-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
+              class="fixed right-2 top-1/2 transform -translate-y-1/2 color6-bg text-white p-2 rounded-full cursor-pointer"
               onclick="nextImage()"
             >
               &#8250;
             </button>
-          </div>
+          </div>        
         </div>  
 
         <!-- BUTTON "Ver mas" -->
