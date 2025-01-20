@@ -203,6 +203,10 @@ body::-webkit-scrollbar-thumb {
   font-size: 2.2rem;
 }
 
+.size10 {
+  font-size: 0.7rem;
+}
+
 .heightVh {
   height: 50vh;
 }
