@@ -328,14 +328,14 @@ document.getElementById('showMoreBtn').addEventListener('click', function () {
 
 // Animacion CHEVRON SCROLL
 
-function scrollAndAnimate(event, sectionId) {
-  event.preventDefault();
-  const targetElement = document.getElementById(sectionId);
-  targetElement.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
-}
+// function scrollAndAnimate(event, sectionId) {
+//   event.preventDefault();
+//   const targetElement = document.getElementById(sectionId);
+//   targetElement.scrollIntoView({
+//     behavior: 'smooth',
+//     block: 'start',
+//   });
+// }
 
 // chevron pulse
 
@@ -442,3 +442,54 @@ const observer = new IntersectionObserver(
 
 const heading = document.querySelector('#animatedHeading');
 observer.observe(heading);
+
+// probandin scroll sec
+
+function scrollAndAnimate(event, sectionId) {
+  event.preventDefault();
+
+  const targetElement = document.getElementById(sectionId);
+  if (!targetElement) return;
+
+  const targetPosition = targetElement.offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000; // Duración en milisegundos (ajústalo para más o menos velocidad)
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+
+    const timeElapsed = currentTime - startTime;
+    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    } else {
+      // Agregar clase de resaltado al final del scroll
+      targetElement.classList.add('highlight');
+      setTimeout(() => {
+        targetElement.classList.remove('highlight');
+      }, 1000);
+    }
+  }
+
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// Agregar manejadores de eventos a los enlaces
+document.querySelectorAll('.scroll-link').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const sectionId = link.getAttribute('data-section');
+    scrollAndAnimate(event, sectionId);
+  });
+});
